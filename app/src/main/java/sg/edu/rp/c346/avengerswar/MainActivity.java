@@ -360,7 +360,7 @@ private TextView lifeLabel;
 
         }
 
-        if(score>20 && score<40){
+        if(score>20 && score<=40){
             levelLabel.setText("Level 2 : Normal");
             enemy1Speed = Math.round(screenWidth / 42);
             enemy2Speed = Math.round(screenWidth / 35);
