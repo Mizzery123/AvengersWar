@@ -177,9 +177,9 @@ public class IntroActivity extends AppCompatActivity {
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
 
-        SharedPreferences.Editor editor = pref.edit();
-        editor.clear();
-        editor.commit(); // Remove this 3 lines to implement sharedpreferences ***
+        //SharedPreferences.Editor editor = pref.edit();
+        //editor.clear();
+        //editor.commit(); // Remove this 3 lines to implement sharedpreferences ***
 
         Boolean isIntroActivityOpnendBefore = pref.getBoolean("isIntroOpnend",false);
         return  isIntroActivityOpnendBefore;
