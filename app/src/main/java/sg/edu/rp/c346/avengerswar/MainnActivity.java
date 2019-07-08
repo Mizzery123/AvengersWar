@@ -25,6 +25,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -45,10 +46,14 @@ public class MainnActivity extends AppCompatActivity {
     static final int REQUEST_PERMISSION_READ_EXTERNAL_STORAGE = 3;
     static final int REQUEST_IMAGE_GALLERY = 4;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainn);
+
+
 
         AssetManager am = getAssets();
         try {
@@ -67,6 +72,9 @@ public class MainnActivity extends AppCompatActivity {
         } catch (IOException e) {
             Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT);
         }
+
+
+
     }
 
     public void onImageFromCameraClick(View view) {
@@ -85,6 +93,11 @@ public class MainnActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
             }
         }
+    }
+
+    public void goingBack(View view) {
+        startActivity(new Intent(getApplicationContext(), StartActivity.class));
+        finish();
     }
 
     private File createImageFile() throws IOException {
