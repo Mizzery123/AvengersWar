@@ -8,18 +8,22 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
 public class StartActivity extends AppCompatActivity {
 
-    ImageButton play, more, shop;
+    ImageButton play, more, shop, puzzle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         //full screnn
+
+        puzzle = findViewById(R.id.puzzle);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -41,6 +45,14 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StartActivity.this, ShopActivity.class));
+                finish();
+            }
+        });
+
+        puzzle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StartActivity.this, MainnActivity.class));
                 finish();
             }
         });

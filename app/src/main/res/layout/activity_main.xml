@@ -31,7 +31,7 @@
             android:layout_toRightOf="@+id/score_lb"
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center_vertical"
-            android:paddingLeft="40dp"
+            android:paddingLeft="80dp"
             android:text="Level 1 : Easy"
             android:textColor="#FFC107"
             android:textSize="18sp" />

@@ -124,6 +124,13 @@
             android:id="@+id/shop"
             android:background="@drawable/shop"/>
 
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp"
+            android:id="@+id/puzzle"
+            android:background="@drawable/puzzle"/>
+
         <!-- later we will add this feature -->
 
 
