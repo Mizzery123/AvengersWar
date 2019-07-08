@@ -71,6 +71,7 @@ private TextView lifeLabel;
     private int enemy1Speed;
     private int enemy2Speed;
     private int score = 0;
+    private int life = 3;
 
 
     private Handler handler = new Handler();
@@ -84,6 +85,7 @@ private TextView lifeLabel;
 
     int action;
     int coins= 0;
+
 
 
     @Override
@@ -320,6 +322,8 @@ private TextView lifeLabel;
 
         if (0 <= enemy1CenterX && enemy1CenterX <= playerSize &&
                 playerY <= enemy1CenterY && enemy1CenterY <= playerY + playerSize){
+
+
 
 
                 timer.cancel();
